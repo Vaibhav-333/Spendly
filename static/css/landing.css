@@ -1,0 +1,223 @@
+/* ------------------------------------------------------------------ */
+/* Hero v2                                                             */
+/* ------------------------------------------------------------------ */
+
+.hero-v2 {
+    padding: 5rem 2rem 5rem;
+    text-align: center;
+}
+
+.hero-v2-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Badge */
+.hero-v2-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #e6f7f4;
+    color: #1f8b76;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    border: 1px solid #b8e8e0;
+}
+
+.hero-v2-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #1f8b76;
+    flex-shrink: 0;
+}
+
+/* Headline */
+.hero-v2-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0;
+}
+
+.hero-v2-title-teal {
+    color: #2a9d8f;
+}
+
+/* Subtitle */
+.hero-v2-subtitle {
+    font-size: 1rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    max-width: 520px;
+    margin: 0;
+}
+
+/* CTA buttons */
+.hero-v2-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-v2-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.7rem 1.6rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.hero-v2-btn:hover {
+    background: #2a9d8f;
+}
+
+/* ------------------------------------------------------------------ */
+/* App preview frame                                                   */
+/* ------------------------------------------------------------------ */
+
+.app-preview {
+    width: 100%;
+    max-width: 640px;
+    background: #f5f4f1;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+    margin-top: 0.5rem;
+}
+
+.app-preview-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.75rem 1rem;
+    background: #edecea;
+    border-bottom: 1px solid var(--border);
+}
+
+.traffic-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.dot-red    { background: #ff5f57; }
+.dot-yellow { background: #febc2e; }
+.dot-green  { background: #28c840; }
+
+.app-preview-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Stat cards */
+.stat-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.stat-card {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.1rem;
+    text-align: left;
+}
+
+.stat-label {
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.stat-value {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+}
+
+.stat-sub {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.stat-positive { color: #1f8b76; }
+.stat-teal     { color: #2a9d8f; }
+.stat-muted    { color: var(--ink-faint); }
+
+/* Bar chart */
+.chart-rows {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.chart-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.chart-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+}
+
+.chart-track {
+    height: 7px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.chart-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.bar-orange { background: #f4a261; }
+.bar-blue   { background: #4a90d9; }
+.bar-purple { background: #7c6bc9; }
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .hero-v2 { padding: 3rem 1rem 3rem; }
+
+    .stat-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-v2-subtitle br { display: none; }
+}

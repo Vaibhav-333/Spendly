@@ -2,62 +2,82 @@
 
 {% block title %}Spendly — Track Every Rupee{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}">
+{% endblock %}
+
 {% block content %}
 
-<section class="hero">
-    <div class="hero-inner">
-        <div class="hero-badge">Personal Finance Tracker</div>
-        <h1 class="hero-title">
-            Know where your<br>
-            <em>money goes</em>
+<section class="hero-v2">
+    <div class="hero-v2-inner">
+
+        <div class="hero-v2-badge">
+            <span class="hero-v2-dot"></span>
+            Free to use &middot; No credit card needed
+        </div>
+
+        <h1 class="hero-v2-title">
+            Track every rupee.<br>
+            <span class="hero-v2-title-teal">Know where it goes.</span>
         </h1>
-        <p class="hero-subtitle">
-            Log expenses, understand your spending patterns,
-            and take control of your financial life —
-            one transaction at a time.
+
+        <p class="hero-v2-subtitle">
+            Spendly helps you log expenses, spot patterns, and stay<br>
+            on budget — without the spreadsheet headache.
         </p>
-        <div class="hero-actions">
-            <a href="{{ url_for('register') }}" class="btn-primary">Start tracking free</a>
-            <a href="{{ url_for('login') }}" class="btn-ghost">Sign in</a>
+
+        <div class="hero-v2-actions">
+            <a href="{{ url_for('register') }}" class="hero-v2-btn">Create free account</a>
+            <a href="{{ url_for('login') }}" class="hero-v2-btn">See how it works ⊕</a>
         </div>
-    </div>
-    <div class="hero-visual">
-        <div class="mock-card">
-            <div class="mock-card-header">
-                <span class="mock-label">March 2026</span>
-                <span class="mock-total">₹12,450</span>
+
+        <div class="app-preview">
+            <div class="app-preview-bar">
+                <span class="traffic-dot dot-red"></span>
+                <span class="traffic-dot dot-yellow"></span>
+                <span class="traffic-dot dot-green"></span>
             </div>
-            <div class="mock-bars">
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Bills</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar" style="width: 72%"></div>
+            <div class="app-preview-body">
+                <div class="stat-cards">
+                    <div class="stat-card">
+                        <div class="stat-label">This month</div>
+                        <div class="stat-value">₹18,240</div>
+                        <div class="stat-sub stat-positive">+12% vs last</div>
                     </div>
-                    <span class="mock-amt">₹4,500</span>
+                    <div class="stat-card">
+                        <div class="stat-label">Budget left</div>
+                        <div class="stat-value">₹6,760</div>
+                        <div class="stat-sub stat-teal">43% remaining</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Transactions</div>
+                        <div class="stat-value">34</div>
+                        <div class="stat-sub stat-muted">this month</div>
+                    </div>
                 </div>
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Food</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-2" style="width: 52%"></div>
+                <div class="chart-rows">
+                    <div class="chart-row">
+                        <span class="chart-label">Food</span>
+                        <div class="chart-track">
+                            <div class="chart-bar bar-orange" style="width: 75%"></div>
+                        </div>
                     </div>
-                    <span class="mock-amt">₹3,200</span>
-                </div>
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Health</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-3" style="width: 33%"></div>
+                    <div class="chart-row">
+                        <span class="chart-label">Travel</span>
+                        <div class="chart-track">
+                            <div class="chart-bar bar-blue" style="width: 55%"></div>
+                        </div>
                     </div>
-                    <span class="mock-amt">₹2,050</span>
-                </div>
-                <div class="mock-bar-row">
-                    <span class="mock-cat">Transport</span>
-                    <div class="mock-bar-track">
-                        <div class="mock-bar mock-bar-4" style="width: 28%"></div>
+                    <div class="chart-row">
+                        <span class="chart-label">Bills</span>
+                        <div class="chart-track">
+                            <div class="chart-bar bar-purple" style="width: 42%"></div>
+                        </div>
                     </div>
-                    <span class="mock-amt">₹1,800</span>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
